@@ -17,6 +17,8 @@ def get_indices_of_item_weights(weights, length, limit):
     # initialise our hash table
     hash_table = {}
 
+    if length <= 1:
+        return None
     for i, v in enumerate(weights):
         difference = limit - v
         # Check if we found the difference
